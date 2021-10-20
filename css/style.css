@@ -1,0 +1,167 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+#loader {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 30vh;
+  z-index: 1000;
+}
+
+#main{
+  background-image: url(../images/bg.png);
+  background-position: center;
+  background-size: auto 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s all;
+}
+
+#planets {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  width: 100%;
+}
+
+#planets button {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 30px;
+  border: 0;
+  cursor: pointer;    
+  box-shadow: 0 0 20px 2px white;
+  padding: 0;
+  position: relative;
+  transition: 0.5s all;
+  background-size: 110%;
+  background-position: center;
+}
+
+#planets button:hover, #planets button.active{
+  transform: scale(2);
+}
+#planets button::after{
+  transition: 0.3s all;
+  transform: scale(50);
+  opacity: 0;
+  font-family: 'Material Icons';
+  content: "gps_not_fixed";
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';  
+  position: absolute; 
+  left: calc(50% - 7px);
+  top: calc(50% - 8px);
+  color: #fff;
+  pointer-events: none;
+}
+#planets button:hover::after, #planets button.active::after{
+  opacity: 1;  
+  transform: scale(5);
+}
+
+#cockpit {
+  height: 100%;
+  position: absolute;
+  left: -25%;
+  top: 0;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.fixed-action-btn.left{
+  left: 23px;  
+  right: unset;
+}
+.embed {
+  position: absolute;
+  z-index: 99;
+  left: 23px;
+  height: calc(100vh - 90px);
+  width: 400px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: none;
+  animation: enterChat 0.5s forwards;
+  background: #000;
+}
+@keyframes enterChat{
+  0%{
+    opacity: 0;
+    bottom: 0;
+  }
+  100%{
+    opacity: 1;
+    bottom: 85px;
+  }
+}
+.embed iframe {
+  width: 500px;
+  height: 600px;
+  position: relative;
+  left: -50px;
+  top: -60px;
+}
+
+#space{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/space.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#toggleQuiz{
+  margin-left: 10px;
+}
+
+#info{
+  background: #fff;
+  box-shadow: 2px 2px 20px 1px #000000;
+  padding: 20px;
+}
+#info #score img{    
+  height: 70px;
+  margin-right: 20px;
+  float: left;
+} 
+#info #score{
+  font-weight: 600;
+}
+.small{
+  font-size: 16px;
+}
+#info #score p{
+  margin: 0;
+}
+#score .small{
+  position: relative;
+  top: -10px;
+}
+#planetName{
+  margin-top: 0;
+  font-weight: 600;
+}#closeInfo {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: grey;
+}#description {
+  font-size: 12px;
+}

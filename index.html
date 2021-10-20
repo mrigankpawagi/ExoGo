@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ExoGo | Explore Exoplanets</title>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="title" content="ExoGo | Explore Exoplanets">
+	<meta name="description"
+		content="Immersive Experience for Exploring Exoplanets">
+	<!-- <meta name="keywords" content="multinomials, expansion, mathematics, pascal, triangles">
+	<meta name="author" content="Mrigank Pawagi"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- SOCIAL MEDIA -->
+	<!-- <meta property="og:type" content="website">
+	<meta property="og:url" content="http://multinomials.mrigank.pawagi.com/">
+	<meta property="og:title"
+		content="Multinomial Triangles | A novel generalisation of the pascal's triangle for expanding multinomials.">
+	<meta property="og:description"
+		content="Multinomial Triangles are a novel generalisation of the pascal's triangle for expanding multinomials.">
+	<meta property="og:image" content="http://multinomials.mrigank.pawagi.com/images/banner.png">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://multinomials.mrigank.pawagi.com/">
+	<meta property="twitter:title"
+		content="Multinomial Triangles | A novel generalisation of the pascal's triangle for expanding multinomials.">
+	<meta property="twitter:description"
+		content="Multinomial Triangles are a novel generalisation of the pascal's triangle for expanding multinomials.">
+	<meta property="twitter:image" content="http://multinomials.mrigank.pawagi.com/images/banner.png"> -->
+	<!-- PWA -->
+	<!-- 
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Multinomial Triangles">
+	<meta name="apple-mobile-web-app-title" content="Multinomial Triangles">
+	<meta name="theme-color" content="#54bbff">
+	<meta name="msapplication-navbutton-color" content="#54bbff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/">
+	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="images/icons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="images/icons/icon-384x384.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="384x384" href="images/icons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="images/icons/icon-512x512.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/icons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="images/icons/icon-256x256.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="256x256" href="images/icons/icon-256x256.png">
+	<meta name="msapplication-TileImage" content="images/icons/icon-192x192.png">
+	<meta name="msapplication-TileColor" content="#54bbff"> -->
+	<link rel="manifest" href="manifest.json">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/icons/icon-192x192.png">
+	<!--STYLES-->
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div id="loader">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-blue">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-red">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-yellow">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+			<div class="spinner-layer spinner-green">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="space"></div>
+
+	<div id="main">
+		<img id="cockpit" src="images/cockpit.png">
+		<div id="planets"></div>
+
+		<div class="fixed-action-btn">
+			<a class="btn-floating btn-large red" id="steer">
+				<i class="large material-icons">double_arrow</i>
+			</a>
+		</div>
+		<div class="fixed-action-btn left">
+			<a class="btn-floating btn-large blue" id="toggleChat">
+				<i class="large material-icons">try</i>
+			</a>			 
+			<a class="btn-floating btn-large green" id="toggleQuiz">
+				<i class="large material-icons">quiz</i>
+			</a>
+		</div>
+		<div id="chat" class="embed">
+			<iframe src="https://theaiplayground.com/jaiinsane2005/bot/ATLSPACE30SEP/view" frameborder="0" allow="microphone"></iframe>
+		</div>
+		<div id="quiz" class="embed">
+			<iframe src="https://theaiplayground.com/jaiinsane2005/bot/ATLSPACE1/view " frameborder="0" allow="microphone"></iframe>
+		</div>
+		<div id="info" class="embed">
+			<button id="closeInfo"><i class="material-icons">cancel</i></button>
+			<h3 class="red-text text-darken-2" id="planetName">Exoplanet</h3>
+			<h3 id="score">
+				<img src="images/icons/icon-192x192.png">
+				<p class="green-text">100%</p>
+				<p class="small">Suitability for Life</p>
+			</h3>
+      		<p id="description"></p>
+		</div>
+	</div>
+	<!--SCRIPTS-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/script.js"></script>		
+</body>
+
+</html>
